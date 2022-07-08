@@ -20,16 +20,14 @@ WORKDIR "/"
 # Install Samtools:
 RUN apt install samtools -y
 
-# Bash starts up when using 'docker run -it <name>'
 RUN apt install nano
-RUN mkdir /usr/src/working
-WORKDIR /usr/src/working
 
 RUN apt install tree
 
 RUN apt install git -y
 
 RUN pip3 install pandas
+ENV PATH="/STAR-2.7.10a/bin/Linux_x86_64/:${PATH}"
 RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
 
 # COPY docker_script.sh /bin/startup
