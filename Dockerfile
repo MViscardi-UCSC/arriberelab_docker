@@ -27,7 +27,10 @@ WORKDIR /usr/src/working
 
 RUN apt install tree
 
-RUN wget 
+RUN apt install git -y
+RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
+
+RUN pip3 install 
 
 # COPY docker_script.sh /bin/startup
 CMD /bin/bash

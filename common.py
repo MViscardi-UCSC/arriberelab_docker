@@ -5,7 +5,6 @@ Converted to python 3: Mar 24, 2020
 
 Several commonly used scripts
 """
-from pyx import color
 from pickle import load, dump
 
 
@@ -151,78 +150,6 @@ def parseGeneList(file):
     """Will parse a line-delimited list of entries to a dict"""
     with open(file, 'r') as f:
         return dict((line.strip().split()[0], f) for line in f)
-
-
-def colors(i):
-    a = [color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0.1, 0.05, 0.9, 0),  # yellow
-         color.cmyk(0.8, 0, 0, 0),  # sky blue
-         color.cmyk(0, 0.5, 1, 0),  # orange
-         color.cmyk(0, 0, 0, 1),  # black
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0, 0, 0, 1),  # black
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0, 0, 0, 1),  # black
-         color.cmyk(0.1, 0.05, 0.9, 0),  # yellow
-         color.cmyk(0, 0.5, 1, 0),  # orange
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green
-         color.cmyk(0.8, 0, 0, 0),  # sky blue
-         color.cmyk(0.5, 1, 0, 0),  # purple
-         color.cmyk(0, 0, 0, 1),  # black
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green$
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0, 0, 0, 1),  # black
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green$
-         color.cmyk(0.97, 0, 0.75, 0),  # blue green$
-         color.cmyk(0, 0.5, 1, 0),  # orange
-         color.cmyk(0, 0.5, 1, 0),  # orange
-         color.cmyk(0, 0.5, 1, 0),  # orange
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(0.1, 0.7, 0, 0),  # reddish purple
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(1, 0.5, 0, 0),  # blue
-         color.cmyk(0.8, 0, 0, 0),  # sky blue
-         color.cmyk(0, 0.8, 1, 0),  # vermillion
-         color.cmyk(0.1, 0.05, 0.9, 0),  # yellow
-         color.cmyk(0.5, 1, 0, 0),  # purple
-         color.cmyk(0, 0, 0, 1),  # black
-         ]
-    """
-    a=[    
-            color.cmyk(1,0.5,0,0),#blue
-            color.cmyk(0.8,0,0,0),
-            color.cmyk(0.17,0,0.29,0.51),#green
-            color.cmyk(0.17,0,0.33,0.34),
-            color.cmyk(0,0.36,0.71,0),#poppy
-            color.cmyk(0,0.16,0.71,0.02),
-            color.cmyk(0,0.8,1,0),#vermillion
-            color.cmyk(0,0.8,0.8,0.1),
-            color.cmyk(0.1,0.7,0,0),
-            color.cmyk(0.1,0.05,0.9,0),
-            color.cmyk(0.97,0,0.75,0),
-            color.cmyk(0,0,0,1)
-            ]
-    """
-    return a[i % len(a)]
 
 
 def mkTuples(dict1):
