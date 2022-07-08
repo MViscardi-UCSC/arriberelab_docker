@@ -28,9 +28,9 @@ WORKDIR /usr/src/working
 RUN apt install tree
 
 RUN apt install git -y
-RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
 
-RUN pip3 install 
+RUN pip3 install pandas
+RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
 
 # COPY docker_script.sh /bin/startup
 CMD /bin/bash
