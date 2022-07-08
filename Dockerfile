@@ -31,8 +31,9 @@ RUN pip3 install pandas
 
 RUN mkdir /usr/src/working
 WORKDIR /usr/src
-ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" /tmp/skipcache
 RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
+RUN chmod -R +x arriberelab_docker
 ENV PATH="/usr/src/arriberelab_docker:${PATH}"
 
 WORKDIR /usr/src/working
