@@ -1,0 +1,14 @@
+# 210629 pipeline settings for elegans RNA-seq data from the Arribere lab using the NEBNext library kit.
+# Parissa Monem
+
+minimumReadLength|50
+maximumReadLength|160
+genomeDir|/data14/parissa/genomes/210414_srf1004
+genomeAnnots|/data14/parissa/genomes/210414_srf1004/210414_srf1004Genome.gtf
+cores|4
+misMatchMax|6
+# These are additional flags passed to STAR during mapping
+optString|--outFilterScoreMinOverLread 0.8 --outFilterMatchNminOverLread 0.8 --outFilterMatchNmin 0
+# The below options require the C. elegans annotation files we build with prepareReadAssignmentFile3.py
+assignReadsToGenes|False
+outputJAM|False
