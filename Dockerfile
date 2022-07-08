@@ -30,6 +30,9 @@ RUN pip3 install pandas
 RUN mkdir /usr/src/working
 RUN mkdir /usr/src/working/scripts_dir
 WORKDIR /usr/src/working/scripts_dir
+
+RUN pip3 install HTSeq
+
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" /tmp/skipcache.txt
 RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
 RUN chmod -R +x arriberelab_docker
