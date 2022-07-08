@@ -19,5 +19,5 @@ genomeAnnots|/data14/parissa/genomes/210414_srf1004/210414_srf1004Genome.gtf
 optString|--outFilterScoreMinOverLread 0.8 --outFilterMatchNminOverLread 0.8 --outFilterMatchNmin 0
 
 # The below options require the C. elegans annotation files we build with prepareReadAssignmentFile3.py
-assignReadsToGenes|False  # This overwrites the script's default of assigning reads
+assignReadsToGenes|False
 outputJoshSAM|False

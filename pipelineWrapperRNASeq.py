@@ -94,6 +94,14 @@ def main(fastqFile, settings, outPrefix, minimumReadLength,
                 print(f'Only running on {cores} cores.')
                 print(f'{misMatchMax2} mismatch max!')
                 print(f'Length/Score parameters: --outFilterMismatchNmax {misMatchMax2} {optString2}')
+                print(f'STAR {optString2} '
+                          f'--outFilterMismatchNmax {misMatchMax2} '
+                          f'--alignIntronMax 1 '
+                          f'--sjdbGTFfile {genomeAnnots2} '
+                          f'--genomeDir {genomeDir2} '
+                          f'--readFilesIn {readFile} '
+                          f'--runThreadN {cores} '
+                          f'--outFileNamePrefix {outPrefix}.mapped.filter')
                 os.system(f'STAR {optString2} '
                           f'--outFilterMismatchNmax {misMatchMax2} '
                           f'--alignIntronMax 1 '
