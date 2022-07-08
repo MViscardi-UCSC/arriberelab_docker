@@ -16,6 +16,7 @@ WORKDIR "STAR-2.7.10a/source"
 RUN ls -a
 RUN make STAR
 WORKDIR "/"
+ENV PATH="/STAR-2.7.10a/bin/Linux_x86_64/:${PATH}"
 
 # Install Samtools:
 RUN apt install samtools -y
@@ -27,8 +28,11 @@ RUN apt install tree
 RUN apt install git -y
 
 RUN pip3 install pandas
-ENV PATH="/STAR-2.7.10a/bin/Linux_x86_64/:${PATH}"
-RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
 
-# COPY docker_script.sh /bin/startup
-CMD /bin/bash
+RUN mkdir /usr/src/working
+WORKDIR /usr/src
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN git clone https://github.com/MViscardi-UCSC/arriberelab_docker
+ENV PATH="/usr/src/arriberelab_docker:${PATH}"
+
+WORKDIR /usr/src/working
