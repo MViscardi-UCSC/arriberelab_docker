@@ -27,10 +27,11 @@ run as python3 pipelineWrapper9.py inputReads.fastq settings.txt outPrefix
 
 # import sys, common
 import sys
-import os, readCollapser4
+import os
 import argparse
 from time import sleep
 
+import readCollapser4
 import assignReadsToGenesDF
 from logJosh import Tee
 import datetime as dt
@@ -44,12 +45,12 @@ ABSOLUTE_DEFAULT_DICT = {'assignReadsToGenes': True, 'keepNonUnique': False, 'ou
                                       '--outReadsUnmapped Fastx '
                                       '--outSJfilterOverhangMin 6 6 6 6',
                          'misMatchMax2': 3,
-                         'optString2': f'--outFilterScoreMin 14 '
-                                       f'--outFilterScoreMinOverLread 0.3 '
-                                       f'--outFilterMatchNmin 14 '
-                                       f'--outFilterMatchNminOverLread 0.3 '
-                                       f'--outReadsUnmapped Fastx '
-                                       f'--outSJfilterOverhangMin 1000 1000 1000 1000 ',
+                         'optString2': '--outFilterScoreMin 14 '
+                                       '--outFilterScoreMinOverLread 0.3 '
+                                       '--outFilterMatchNmin 14 '
+                                       '--outFilterMatchNminOverLread 0.3 '
+                                       '--outReadsUnmapped Fastx '
+                                       '--outSJfilterOverhangMin 1000 1000 1000 1000 ',
                          'genomeDir2': False, 'genomeAnnots2': False}
 
 
