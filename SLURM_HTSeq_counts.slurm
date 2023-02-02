@@ -9,4 +9,4 @@
 
 pip3 install htseq
 
-python3 -h HTSeq.scripts.count /hb/home/saguiar/220721_RNASeq/output_dir/*/*.bam /hb/home/saguiar/220721_RNASeq/genome_dir/*.gtf
+python3 -m HTSeq.scripts.count /hb/home/saguiar/220721_RNASeq/output_dir/*/*.bam /hb/home/saguiar/220721_RNASeq/genome_dir/*.gtf
