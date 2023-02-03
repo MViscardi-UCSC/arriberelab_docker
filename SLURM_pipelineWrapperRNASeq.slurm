@@ -17,17 +17,18 @@ SETTTINGS_FILE="./RNASeqSettings.txt"
 
 # Run this command from inside of the arriberelab_docker scripts directory.
 #   The format should look like this:
-#      <main folder>/
-#      ├─ arriberelab_docker/
-#      │  ├─ *arribere lab scripts*/
-#      │  ├─ *THIS SLURM SCRIPT*
-#      │  ├─ RNASeqSettings.txt (edited for your run!)
-#      ├─ data_dir/
-#      │  ├─ <unziped fastq files>.fastq
-#      ├─ genome_dir/
-#      │  ├─ <mouse genome - indexed with STAR>
-#      ├─ output_dir/
-#      │  ├─ <empty until after run>
+#      <experiment directory>
+#      ├── arriberelab_docker
+#      │   ├── *THIS SLURM SCRIPT*
+#      │   ├── *Other Arribere lab scripts*
+#      │   └── RNASeqSettings.txt (edited for your run!)
+#      ├── data_dir
+#      │   └── <unziped fastq files>.fastq
+#      ├── genome_dir
+#      │   └── <genome - indexed with STAR>
+#      └── output_dir
+#          └── <empty until after run>
+
 
 # Load modules on the hummingbird
 module load python/3.7
